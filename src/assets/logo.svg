@@ -1,25 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
-  <!-- DD Monogram Icon -->
-  <g transform="translate(0, 4)">
-    <!-- Building/Structure outline forming "D" -->
-    <rect x="2" y="8" width="4" height="32" rx="1" fill="#c97a2b"/>
-    <rect x="2" y="8" width="20" height="4" rx="1" fill="#c97a2b"/>
-    <rect x="2" y="36" width="20" height="4" rx="1" fill="#c97a2b"/>
-    <rect x="18" y="12" width="4" height="24" rx="1" fill="#c97a2b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 52" fill="none">
+  <defs>
+    <linearGradient id="gradOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="gradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- High-end architectural monogram DD -->
+  <g transform="translate(4, 4)" filter="url(#shadow)">
+    <!-- First D (Orange/Copper) -->
+    <path d="M 0 0 L 16 0 C 28 0, 32 8, 32 22 C 32 36, 28 44, 16 44 L 0 44 Z M 8 8 L 8 36 L 14 36 C 20 36, 23 31, 23 22 C 23 13, 20 8, 14 8 Z" fill="url(#gradOrange)" />
     
-    <!-- Second D with structural beam accent -->
-    <rect x="26" y="8" width="4" height="32" rx="1" fill="#0f172a"/>
-    <rect x="26" y="8" width="20" height="4" rx="1" fill="#0f172a"/>
-    <rect x="26" y="36" width="20" height="4" rx="1" fill="#0f172a"/>
-    <rect x="42" y="12" width="4" height="24" rx="1" fill="#0f172a"/>
+    <!-- Second D (Dark/Slate) overlapping -->
+    <path d="M 18 6 L 30 6 C 40 6, 44 13, 44 25 C 44 37, 40 44, 30 44 L 18 44 L 18 36 L 28 36 C 33 36, 36 32, 36 25 C 36 18, 33 14, 28 14 L 18 14 Z" fill="url(#gradDark)" />
     
-    <!-- Architectural roof accent -->
-    <polygon points="14,0 0,8 28,8" fill="#c97a2b" opacity="0.6"/>
-    <line x1="14" y1="0" x2="38" y2="0" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
-    <polygon points="38,0 28,8 48,8" fill="#0f172a" opacity="0.4"/>
+    <!-- Stylized architectural swoosh / structural beam -->
+    <path d="M -4 44 L 40 44 L 44 40 L -4 40 Z" fill="#0f172a" opacity="0.8" />
+    <path d="M 12 -4 L 46 -4 L 42 0 L 12 0 Z" fill="#ea580c" opacity="0.9" />
   </g>
   
-  <!-- Company Name -->
-  <text x="58" y="22" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="16" fill="#0f172a" letter-spacing="0.5">Dynamic Design</text>
-  <text x="58" y="39" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="12" fill="#c97a2b" letter-spacing="2.5" text-transform="uppercase">&amp; CONSTRUCTIONS</text>
+  <!-- Typography -->
+  <text x="64" y="24" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="18" fill="#0f172a" letter-spacing="1">DYNAMIC DESIGN</text>
+  <text x="66" y="42" font-family="'Inter', -apple-system, sans-serif" font-weight="600" font-size="10.5" fill="#ea580c" letter-spacing="3" text-transform="uppercase">&amp; CONSTRUCTIONS</text>
 </svg>
