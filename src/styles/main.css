@@ -160,6 +160,22 @@ select:focus-visible {
   align-items: center;
 }
 
+.brand-text {
+  margin-left: 12px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .brand-text {
+    font-size: 0.85rem;
+    max-width: 140px;
+  }
+}
+
 .brand-logo {
   height: 72px;
   width: auto;
