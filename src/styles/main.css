@@ -156,6 +156,15 @@ select:focus-visible {
   font-weight: 700;
   letter-spacing: 0.02em;
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .nav-links {
