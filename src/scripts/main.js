@@ -51,16 +51,22 @@ const initMobileMenu = () => {
   // Close menu when a link is clicked, then scroll manually (mobile-safe)
   navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetEl = document.getElementById(targetId);
+      const isMenuOpen = navLinks.classList.contains('open');
 
-      closeMenu();
+      if (isMenuOpen) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetEl = document.getElementById(targetId);
 
-      if (targetEl) {
-        setTimeout(() => {
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 150);
+        closeMenu();
+
+        if (targetEl) {
+          // Use window.scrollTo for maximum browser compatibility
+          setTimeout(() => {
+            const top = targetEl.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }, 350);
+        }
       }
     });
   });
