@@ -51,4 +51,4 @@ Because this project is a purely static website with absolutely no build steps, 
 
 ## 👨‍💻 Developer Credit
 
-This website was proudly designed and developed by **Aftab Alam**.
+This website was proudly designed and developed by **[Aftab Alam](https://www.linkedin.com/in/aftab-alam-8a662a126/)**.
