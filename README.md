@@ -1,41 +1,50 @@
-# Dynamic Design & Construction
+# Dynamic Design & Constructions
 
-A fast, responsive static marketing website for a construction and design studio.
+> **Where Concepts Meet Creation.**
 
-## Project structure
+This repository contains the source code for the official website of **Dynamic Design & Constructions**, a premier architecture, construction, and interior design firm based in Patna, Bihar.
 
-- `index.html` — main page entry point
-- `src/styles/main.css` — site styling (design tokens in `:root`, section-commented)
-- `src/scripts/main.js` — lightweight JavaScript initialisation
-- `src/assets/` — images, favicon, and media assets
-- `robots.txt` — crawler access rules
-- `sitemap.xml` — search-engine sitemap
+## 🌐 Live Website
+*(Add your live GitHub Pages or Netlify URL here! e.g., `https://anoobdev.github.io/dynamic-design-construction`)*
 
-## Security
+## ✨ Key Features
 
-- **Content-Security-Policy** meta tag locks down script, style, font, and image sources.
-- **Referrer-Policy** set to `strict-origin-when-cross-origin`.
-- No inline scripts or styles — the CSP can stay strict.
-- No third-party JavaScript libraries (zero supply-chain risk).
+- **Blazing Fast Performance**: Built completely without heavy frameworks (zero dependencies) for instant load times.
+- **Fully Responsive**: Fluid, mobile-first design system utilizing modern CSS layouts.
+- **SEO & Accessibility Optimized**: Includes proper semantic HTML structure, strict WAI-ARIA accessibility standards, and full JSON-LD `LocalBusiness` structured data for Google Rich Snippets.
+- **Ironclad Security**: Enforces a strict `Content-Security-Policy` (CSP) with zero third-party script supply chain risks.
+- **Rich Media Gallery**: Highly optimized architectural renders and construction site progress photos.
 
-## SEO
+## 🛠️ Tech Stack
 
-- Open Graph and Twitter Card meta tags for social sharing.
-- JSON-LD `LocalBusiness` structured data for Google rich results.
-- Canonical URL, `robots.txt`, and `sitemap.xml` included.
+- **HTML5**: Semantic and accessible DOM structure.
+- **CSS3**: Modern Vanilla CSS (`:root` tokens, flexbox/grid layouts, micro-animations, and hover states).
+- **Vanilla JavaScript**: Extremely lightweight logic for mobile navigation toggles.
 
-## Accessibility
+## 📂 Project Structure
 
-- Skip-to-content link for keyboard and screen-reader users.
-- `:focus-visible` ring on all interactive elements.
-- Semantic HTML: `<header>`, `<main>`, `<section>`, `<article>`, `<figure>`, `<blockquote>`.
+```text
+├── index.html            # Main entry point and page layout
+├── sitemap.xml           # Search engine sitemap
+├── robots.txt            # Search engine crawler permissions
+└── src/
+    ├── scripts/
+    │   └── main.js       # Lightweight interaction logic
+    ├── styles/
+    │   └── main.css      # Core design system and section styling
+    └── assets/           # Portfolio images, team photos, and SVG logo
+```
 
-## Maintainability notes
+## 🚀 Running Locally
 
-- All colour values live in CSS custom properties in `:root`.
-- CSS is organised with section comments (`/* ===== HERO ===== */`).
-- Keep the site simple and static for easier maintenance.
-- Keep JavaScript small, focused, and progressively enhanced.
-- Avoid inline scripts and inline styles where possible.
-- For future growth, consider a static-site generator (Astro, 11ty, Hugo) or a lightweight build step.
+Because this project is a purely static website with absolutely no build steps, running it locally is incredibly easy:
 
+1. Clone the repository to your machine.
+2. Simply double-click `index.html` to open it in any web browser.
+3. *Optional:* Use an extension like VS Code's **Live Server** to get automatic hot-reloading while making edits.
+
+## 🛡️ Maintainability Notes
+
+- **Centralized Design Tokens**: All brand colors, typography sizes, and spacing variables are maintained as CSS Custom Properties in the `:root` pseudo-class inside `main.css`.
+- **Organized Styles**: The CSS file is clearly labeled and split into logical sections (e.g., `/* ===== HERO ===== */`).
+- **Future Proof**: By avoiding complex JavaScript frameworks, anyone on the team can edit the code instantly without needing Node.js, `npm`, or complex package managers.
