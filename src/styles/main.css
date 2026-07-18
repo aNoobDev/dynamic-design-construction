@@ -1139,7 +1139,9 @@ select:focus-visible {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: var(--hero-bg-start);
+    background-color: rgba(10, 22, 40, 0.98); /* Solid dark blue fallback */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
     flex-direction: column;
     padding: 5rem 2rem 2rem;
     gap: 1.5rem;
