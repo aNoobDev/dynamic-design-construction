@@ -52,20 +52,27 @@ const initMobileMenu = () => {
   navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', (e) => {
       const isMenuOpen = navLinks.classList.contains('open');
+      console.log('[NAV] Link clicked:', link.getAttribute('href'), 'Menu open:', isMenuOpen);
 
       if (isMenuOpen) {
         e.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
         const targetEl = document.getElementById(targetId);
+        console.log('[NAV] Target element found:', !!targetEl, 'ID:', targetId);
 
         closeMenu();
 
         if (targetEl) {
-          // Use window.scrollTo for maximum browser compatibility
+          // Wait for menu close animation + overflow reset, then scroll
           setTimeout(() => {
-            const top = targetEl.getBoundingClientRect().top + window.scrollY;
+            const rect = targetEl.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const top = rect.top + scrollTop;
+            console.log('[NAV] Scrolling to:', top, 'Current scroll:', scrollTop);
+            console.log('[NAV] Body overflow:', document.body.style.overflow);
+            console.log('[NAV] HTML overflow:', document.documentElement.style.overflow);
             window.scrollTo({ top: top, behavior: 'smooth' });
-          }, 350);
+          }, 400);
         }
       }
     });

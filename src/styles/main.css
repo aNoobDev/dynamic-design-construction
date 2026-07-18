@@ -1129,22 +1129,23 @@ select:focus-visible {
     gap: 2rem;
   }
 
-  /* Boost nav above hero-grid so the menu escapes nav's stacking context */
+  /* Boost nav above hero-grid AND above the overlay */
   .nav {
     z-index: 100;
   }
 
   .menu-toggle {
     display: block;
+    z-index: 102;
   }
 
-  /* Dark overlay behind the menu */
+  /* Dark overlay behind the menu — MUST be below .nav (100) */
   .mobile-overlay {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 99998;
+    z-index: 99;
   }
 
   .mobile-overlay.active {
@@ -1157,13 +1158,13 @@ select:focus-visible {
     right: -100%;
     width: 280px;
     height: 100vh;
-    height: 100dvh; /* dynamic viewport height for mobile Safari */
+    height: 100dvh;
     background: #0a1628;
     flex-direction: column;
     padding: 5rem 2rem 2rem;
     gap: 1.5rem;
     transition: right 0.3s ease-out;
-    z-index: 99999;
+    z-index: 101;
     box-shadow: -8px 0 40px rgba(0, 0, 0, 0.8);
   }
 
