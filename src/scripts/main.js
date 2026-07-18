@@ -48,9 +48,14 @@ const initMobileMenu = () => {
     overlay.addEventListener('click', closeMenu);
   }
 
-  // Close menu when a link is clicked
+  // Close menu when a link is clicked (slight delay so scroll works on mobile)
   navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', () => {
+      // Remove overflow lock immediately so the page can scroll
+      document.body.style.overflow = '';
+      // Delay closing the menu panel so the browser processes the anchor first
+      setTimeout(closeMenu, 300);
+    });
   });
 };
 
