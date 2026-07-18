@@ -5,7 +5,7 @@
 This repository contains the source code for the official website of **Dynamic Design & Construction**, a premier architecture, construction, and interior design firm based in Patna, Bihar.
 
 ## 🌐 Live Website
-*(Add your live GitHub Pages or Netlify URL here! e.g., `https://anoobdev.github.io/dynamic-design-construction`)*
+**[https://dynamicdesign.in](https://dynamicdesign.in)**
 
 ## ✨ Key Features
 
