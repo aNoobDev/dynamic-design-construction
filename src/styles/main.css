@@ -161,18 +161,33 @@ select:focus-visible {
 }
 
 .brand-text {
+  display: flex;
+  flex-direction: column;
   margin-left: 12px;
+}
+
+.brand-name {
   color: #ffffff;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  color: var(--hero-nav-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  margin-top: 4px;
 }
 
 @media (max-width: 768px) {
-  .brand-text {
+  .brand-name {
     font-size: 0.85rem;
-    max-width: 140px;
+  }
+  .brand-tagline {
+    font-size: 0.65rem;
   }
 }
 
