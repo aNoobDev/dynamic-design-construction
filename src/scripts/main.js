@@ -48,13 +48,20 @@ const initMobileMenu = () => {
     overlay.addEventListener('click', closeMenu);
   }
 
-  // Close menu when a link is clicked (slight delay so scroll works on mobile)
+  // Close menu when a link is clicked, then scroll manually (mobile-safe)
   navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      // Remove overflow lock immediately so the page can scroll
-      document.body.style.overflow = '';
-      // Delay closing the menu panel so the browser processes the anchor first
-      setTimeout(closeMenu, 300);
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetEl = document.getElementById(targetId);
+
+      closeMenu();
+
+      if (targetEl) {
+        setTimeout(() => {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
     });
   });
 };
