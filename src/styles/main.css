@@ -168,10 +168,11 @@ select:focus-visible {
 
 .brand-name {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   line-height: 1.1;
+  font-weight: 700;
 }
 
 .brand-subname {
@@ -194,7 +195,7 @@ select:focus-visible {
 
 @media (max-width: 768px) {
   .brand-name {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   .brand-subname {
     font-size: 0.7rem;
