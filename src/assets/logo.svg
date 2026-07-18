@@ -5,8 +5,8 @@
       <stop offset="100%" stop-color="#ea580c" />
     </linearGradient>
     <linearGradient id="gradDark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#334155" />
-      <stop offset="100%" stop-color="#0f172a" />
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
     </linearGradient>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.12"/>
@@ -22,12 +22,12 @@
     <path d="M 18 6 L 30 6 C 40 6, 44 13, 44 25 C 44 37, 40 44, 30 44 L 18 44 L 18 36 L 28 36 C 33 36, 36 32, 36 25 C 36 18, 33 14, 28 14 L 18 14 Z" fill="url(#gradDark)" />
     
     <!-- Stylized architectural swoosh / structural beam -->
-    <path d="M -4 44 L 40 44 L 44 40 L -4 40 Z" fill="#0f172a" opacity="0.8" />
+    <path d="M -4 44 L 40 44 L 44 40 L -4 40 Z" fill="#ffffff" opacity="0.9" />
     <path d="M 12 -4 L 46 -4 L 42 0 L 12 0 Z" fill="#ea580c" opacity="0.9" />
   </g>
   
   <!-- Typography -->
-  <text x="64" y="22" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="18" fill="#0f172a" letter-spacing="1">DYNAMIC DESIGN</text>
+  <text x="64" y="22" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="18" fill="#ffffff" letter-spacing="1">DYNAMIC DESIGN</text>
   <text x="66" y="38" font-family="'Inter', -apple-system, sans-serif" font-weight="600" font-size="10.5" fill="#ea580c" letter-spacing="3" text-transform="uppercase">&amp; CONSTRUCTIONS</text>
-  <text x="66" y="52" font-family="'Inter', -apple-system, sans-serif" font-weight="500" font-style="italic" font-size="8.5" fill="#64748b" letter-spacing="0.5">Where concepts meets creation</text>
+  <text x="66" y="52" font-family="'Inter', -apple-system, sans-serif" font-weight="500" font-style="italic" font-size="8.5" fill="#cbd5e1" letter-spacing="0.5">Where concepts meets creation</text>
 </svg>
