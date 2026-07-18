@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
+  <!-- DD Monogram Icon -->
+  <g transform="translate(0, 4)">
+    <!-- Building/Structure outline forming "D" -->
+    <rect x="2" y="8" width="4" height="32" rx="1" fill="#c97a2b"/>
+    <rect x="2" y="8" width="20" height="4" rx="1" fill="#c97a2b"/>
+    <rect x="2" y="36" width="20" height="4" rx="1" fill="#c97a2b"/>
+    <rect x="18" y="12" width="4" height="24" rx="1" fill="#c97a2b"/>
+    
+    <!-- Second D with structural beam accent -->
+    <rect x="26" y="8" width="4" height="32" rx="1" fill="#0f172a"/>
+    <rect x="26" y="8" width="20" height="4" rx="1" fill="#0f172a"/>
+    <rect x="26" y="36" width="20" height="4" rx="1" fill="#0f172a"/>
+    <rect x="42" y="12" width="4" height="24" rx="1" fill="#0f172a"/>
+    
+    <!-- Architectural roof accent -->
+    <polygon points="14,0 0,8 28,8" fill="#c97a2b" opacity="0.6"/>
+    <line x1="14" y1="0" x2="38" y2="0" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="38,0 28,8 48,8" fill="#0f172a" opacity="0.4"/>
+  </g>
+  
+  <!-- Company Name -->
+  <text x="58" y="22" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="16" fill="#0f172a" letter-spacing="0.5">Dynamic Design</text>
+  <text x="58" y="39" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="12" fill="#c97a2b" letter-spacing="2.5" text-transform="uppercase">&amp; CONSTRUCTIONS</text>
+</svg>
