@@ -48,3 +48,7 @@ Because this project is a purely static website with absolutely no build steps, 
 - **Centralized Design Tokens**: All brand colors, typography sizes, and spacing variables are maintained as CSS Custom Properties in the `:root` pseudo-class inside `main.css`.
 - **Organized Styles**: The CSS file is clearly labeled and split into logical sections (e.g., `/* ===== HERO ===== */`).
 - **Future Proof**: By avoiding complex JavaScript frameworks, anyone on the team can edit the code instantly without needing Node.js, `npm`, or complex package managers.
+
+## 👨‍💻 Developer Credit
+
+This website was proudly designed and developed by **Aftab Alam**.
