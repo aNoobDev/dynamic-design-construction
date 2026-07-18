@@ -1,15 +1,20 @@
+/**
+ * Dynamic Design & Construction — site initialisation
+ * This file is loaded with `defer`, so the DOM is already parsed when it runs.
+ */
+
 const initYear = () => {
   const yearElement = document.getElementById('year');
   if (!yearElement) {
     return;
   }
 
-  const currentYear = new Date().getFullYear();
-  yearElement.textContent = String(currentYear);
+  yearElement.textContent = String(new Date().getFullYear());
 };
 
 const initSite = () => {
   initYear();
 };
 
-document.addEventListener('DOMContentLoaded', initSite);
+// `defer` guarantees the DOM is ready — no need for DOMContentLoaded.
+initSite();

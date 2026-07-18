@@ -9,9 +9,74 @@
       content="Dynamic Design & Construction creates thoughtful homes and commercial spaces through architecture, design-build services, renovations, and project management."
     />
     <meta name="theme-color" content="#0f172a" />
+
+    <!-- Security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Canonical & SEO -->
+    <link rel="canonical" href="https://dynamicdesignconstruction.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dynamic Design & Construction | Architecture, Renovation & Build Management" />
+    <meta property="og:description" content="Dynamic Design & Construction creates thoughtful homes and commercial spaces through architecture, design-build services, renovations, and project management." />
+    <meta property="og:url" content="https://dynamicdesignconstruction.com/" />
+    <meta property="og:image" content="https://dynamicdesignconstruction.com/src/assets/studio-view.jpg" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Dynamic Design & Construction" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="src/assets/favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="src/styles/main.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Dynamic Design & Construction",
+        "description": "Design-build partner for architecture, general contracting, renovations, and project management.",
+        "url": "https://dynamicdesignconstruction.com",
+        "telephone": "+916205591229",
+        "email": "hello@dynamicdesignconstruction.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Pillar No:- 77, near Nirog Hospital, Mali Tola, Raja Bazar",
+          "addressLocality": "Patna",
+          "addressRegion": "Bihar",
+          "postalCode": "800014",
+          "addressCountry": "IN"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Patna" },
+          { "@type": "State", "name": "Bihar" }
+        ],
+        "serviceType": [
+          "Architecture & Design",
+          "General Contracting",
+          "Renovations",
+          "Project Management"
+        ]
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="hero" id="top">
       <nav class="nav container">
         <a class="brand" href="#top">Dynamic Design & Construction</a>
@@ -62,7 +127,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="section showcase" aria-labelledby="showcase-title">
         <div class="container showcase-grid">
           <div class="showcase-copy">
@@ -75,8 +140,10 @@
           </div>
           <figure class="showcase-media">
             <img
-              src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnVQkWaeo8Ci2YEgUAnZ4Zu4E-HKy9IWZSvBTDMPdwHtt4DiD4myD8bbdw9HPemiSSPkyQxV6RlseTi4Eni0nvVs0emptj0D2AXdWjpN0TxCQyzdmLbFsz5NtrHvKabZdSftkI16PxcKEjo=w408-h273-k-no"
+              src="src/assets/studio-view.jpg"
               alt="Dynamic Design & Construction place view from Google Maps"
+              width="408"
+              height="273"
               loading="lazy"
             />
             <figcaption>Image reference from the Dynamic Design & Construction Google Maps listing.</figcaption>
@@ -126,12 +193,14 @@
               we create a clear path to execution and guide you every step of the way.
             </p>
           </div>
-          <div class="quote-box">
+          <blockquote class="quote-box">
             <p>
-              “The best projects happen when design, construction, and client goals stay aligned.”
+              "The best projects happen when design, construction, and client goals stay aligned."
             </p>
-            <span>— Dynamic Design & Construction</span>
-          </div>
+            <footer>
+              <cite>— Dynamic Design & Construction</cite>
+            </footer>
+          </blockquote>
         </div>
       </section>
 
