@@ -16,21 +16,41 @@ const initYear = () => {
 const initMobileMenu = () => {
   const toggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
+  const overlay = document.getElementById('mobile-overlay');
   if (!toggle || !navLinks) {
     return;
   }
 
+  const openMenu = () => {
+    toggle.classList.add('active');
+    navLinks.classList.add('open');
+    if (overlay) overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMenu = () => {
+    toggle.classList.remove('active');
+    navLinks.classList.remove('open');
+    if (overlay) overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
   toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    navLinks.classList.toggle('open');
+    if (navLinks.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
+
+  // Close menu when overlay is tapped
+  if (overlay) {
+    overlay.addEventListener('click', closeMenu);
+  }
 
   // Close menu when a link is clicked
   navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      toggle.classList.remove('active');
-      navLinks.classList.remove('open');
-    });
+    link.addEventListener('click', closeMenu);
   });
 };
 

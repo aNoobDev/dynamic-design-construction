@@ -1129,33 +1129,53 @@ select:focus-visible {
     gap: 2rem;
   }
 
+  /* Boost nav above hero-grid so the menu escapes nav's stacking context */
+  .nav {
+    z-index: 100;
+  }
+
   .menu-toggle {
     display: block;
   }
 
+  /* Dark overlay behind the menu */
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99998;
+  }
+
+  .mobile-overlay.active {
+    display: block;
+  }
+
   .nav-links {
-    position: fixed !important;
-    top: 0 !important;
-    right: -100% !important;
-    width: 280px !important;
-    height: 100vh !important;
-    background-color: #0c1a2e !important; /* Extremely solid dark blue */
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    flex-direction: column !important;
-    padding: 5rem 2rem 2rem !important;
-    gap: 1.5rem !important;
-    transition: right 0.3s ease-out !important;
-    z-index: 99999 !important;
-    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.8) !important;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    height: 100dvh; /* dynamic viewport height for mobile Safari */
+    background: #0a1628;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-out;
+    z-index: 99999;
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.8);
   }
 
   .nav-links.open {
-    right: 0 !important;
+    right: 0;
   }
 
   .nav-links a {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    color: #f9fbff;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 
