@@ -214,6 +214,48 @@ const initScrollReveal = () => {
   reveals.forEach((el) => observer.observe(el));
 };
 
+/* ===== WHATSAPP FORM SUBMISSION ===== */
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent page reload
+    
+    // Gather form data
+    const name = document.getElementById('contact-name').value.trim();
+    const phone = document.getElementById('contact-phone').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const project = document.getElementById('contact-project').value;
+    const message = document.getElementById('contact-message').value.trim();
+    
+    // The number to send the message to (Dynamic Design's primary contact)
+    const whatsappNumber = '918252592639';
+    
+    // Format the message beautifully
+    let whatsappText = `*New Website Inquiry* 🚀\n\n`;
+    whatsappText += `*Name:* ${name}\n`;
+    if (phone) whatsappText += `*Phone:* ${phone}\n`;
+    whatsappText += `*Email:* ${email}\n`;
+    
+    if (project) {
+      // Capitalize the project type
+      const formattedProject = project.charAt(0).toUpperCase() + project.slice(1);
+      whatsappText += `*Project Type:* ${formattedProject}\n`;
+    }
+    
+    whatsappText += `\n*Message:*\n${message}`;
+    
+    // URL encode the text so it works in a link
+    const encodedText = encodeURIComponent(whatsappText);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Clear the form
+    contactForm.reset();
+  });
+}
+
 // ─────────────────────────────────────────────────────────────
 // 5. ACTIVE NAV HIGHLIGHTING
 // ─────────────────────────────────────────────────────────────
